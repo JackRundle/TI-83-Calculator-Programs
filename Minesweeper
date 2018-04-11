@@ -1,15 +1,15 @@
 // Creates a 2D array the size of the screen
-// Fills array with the variable F 9's to represent bombs
+// Fills array with "F" 9's to represent bombs
 // Upon generation of bomb, we add 1 to each element of the array surrounding that coordinate 
-//   that is not outside the parameters of the array or already a 9
+//   	that is not outside the parameters of the array or already a 9
 // Pressing the 2ND key reveals the value of the array at current position, 
-//   and if it is not a 9, then a 10 is to that position in the array
+//   	and if it is not a 9, then a 10 is added to that position in the array
 // Pressing the ALPHA key flags the square with a "P", which adds 20 to that coordinate of the array
 // Arrow keys move the "mouse", and each iteration we check the value in the array of its 
-//   previous coordinates to determine how to cover up it's previous position on screen
-//   ex: if previous coord value is 12, we output a "2" to the screen, because it has already been revealed
-//       if it were a 2, we would output a "." because it has not yet been revealed
-		 similarly, if it were a 22, we output a "P" to the screen, because it has been flagged
+//   	previous coordinates to determine how to cover up it's previous position on screen
+//   	ex: if previous coord value is 12, we output a "2" to the screen, because it has already been revealed
+//     	  if the value was a 2, we would output a "." because it has not yet been revealed
+//	  similarly, if the value was a 22, we output a "P" to the screen, because it has been flagged
 
 :ClrHome
 :Output(1, 1, "Loading...")
