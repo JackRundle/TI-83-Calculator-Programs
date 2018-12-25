@@ -1,5 +1,5 @@
 ClrHome
-Menu("Options:", "Reduce Radical", 1, "Slope Field", 2, "Quit", 99)
+Menu("Options:", "Slope Field", 1, "Reduce Radical", 2, "Quit", 99)
 
 Lbl 99
 Stop
