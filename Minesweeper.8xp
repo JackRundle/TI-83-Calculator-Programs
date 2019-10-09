@@ -57,7 +57,7 @@ While 1
 
 Output(Y,X,"+")
 getKey→K
-X→A:Y→A
+X→A:Y→B
 
 If [A](B,A)>9:Then
 
