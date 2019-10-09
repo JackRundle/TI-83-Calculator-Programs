@@ -1,10 +1,11 @@
 ClrHome
-Menu("Options:", "Slope Field", 1, "Reduce Radical", 2, "Quit", 99)
+Menu("Options:", "Slope Field", 1, "Reduce Radical", 2, "Base Converter", 3, "Quit", 99)
 
 Lbl 99
 Stop
 
 
+====================================================
 
 Lbl 1
 
@@ -34,6 +35,7 @@ Pause
 ClrDraw:ZStandard:ClrHome:Stop
 
 
+====================================================
 
 Lbl 2
 
@@ -63,3 +65,40 @@ Output(1, D + 2, A)
 End
 Output(2, 1, F * √(A))
 Stop
+
+
+====================================================
+
+Lbl 3
+
+ClrHome
+
+Input "Start base: ", B
+Input "Number: ", Str1
+Disp " "
+Input "End base: ", F
+
+If B > 10 or F > 10
+Goto 3
+
+0 → D
+
+// convert to decimal
+For(X, length(Str1), 1, -1)
+D + (expr(sub(Str1, X, 1)) * (B ^ length(Str1) - X) → D
+End
+
+0 → O
+
+// convert from decimal to end base
+While D > 0
+int(ln(D) / ln(f)) → X
+O + 10^X → O
+D - F^X → D
+End
+
+Disp O
+
+Stop
+
+
